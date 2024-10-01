@@ -17,23 +17,73 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.about-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.h1{
+
+.welcome_msg{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin-top: 5%; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  align-items: center;
+  
+}
+
+.msg1{
+  font-size: x-large;
+  padding: 30px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .15em solid orange; The typwriter cursor*/
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  width:0;
+  animation: typing 4.5s steps(50, end);
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards; /*ensure width stays full*/
+  
+  
+}
+
+.msg2{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+ /* border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  width:0;
+  animation: typing 4s steps(50, end);
+  margin-bottom: 80px;
+  animation-delay: 3s;
+  animation-fill-mode: forwards; /*ensure width stays full*/
+}
+
+h1{
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-weight:300;
-  font-size: x-large;
+  font-size: xx-large;
+  font-weight: bolder;
 
 }
 
@@ -48,4 +98,24 @@ body {
 .gallery-container{
   display: flex;
   flex-direction: column;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+} */
+
+.shape-container{
+
+  height: 500px;
+  width: 500px;
+}
+
+.sphere:hover{
+  cursor: url(/public/heart.png), url(/public/cursor.png), crosshair;
 }

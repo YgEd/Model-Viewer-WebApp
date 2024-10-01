@@ -1,6 +1,8 @@
+"use client"
 
 import Image from "next/image";
 import ModelCard from "./components/ModelCard"
+import { Sphere } from "./components/Sphere"
 export default function Home() {
 
 //   interface file{
@@ -36,9 +38,16 @@ export default function Home() {
 //   },[])
  
   return (
-    <div className="h1">
+    <div className="welcome_msg">
 
       <h1>Welcome!</h1>
+      {/* <br></br> */}
+      <span className="msg1">This website let's you upload and look at your beautiful 3D models</span>
+      <span className="msg2">You can play with this ball if you don't know what else to do</span>
+      <div className="shape-container">
+        <Sphere/>
+
+      </div>
     </div>
   );
 }
