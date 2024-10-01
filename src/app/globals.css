@@ -25,3 +25,27 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.h1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight:300;
+  font-size: x-large;
+
+}
+
+.model-cards-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container{
+  display: flex;
+  flex-direction: column;
+}
